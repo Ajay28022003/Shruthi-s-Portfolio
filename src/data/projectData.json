@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "name": "SHRUTHI KANNAPIRAN",
+    "role": "Data Engineer & AI Enthusiast",
+    "headline": "Crafting intelligent digital experiences.",
+    "description": "I design and build scalable data pipelines and analytics systems. Passionate about transforming raw data into actionable insights, and actively exploring applied AI, machine learning, and intelligent data platforms.",
+    "socials": {
+      "resume": "/resume.pdf",
+      "linkedin": "https://linkedin.com/in/yourprofile",
+      "github": "https://github.com/yourusername",
+      "instagram": "https://instagram.com/yourusername"
+    }
+  },
+  "experience": [
+    {
+      "company": "TechNova Inc.",
+      "role": "Senior Frontend Developer",
+      "date": "2024 — Present",
+      "description": "Leading the migration of legacy architecture to Next.js. Improved site performance by 40% and established a new design system used by 5+ teams.",
+      "skills": ["React", "Next.js", "TypeScript", "GraphQL"]
+    },
+    {
+      "company": "Creative Solutions",
+      "role": "Creative Developer",
+      "date": "2022 — 2024",
+      "description": "Developed award-winning immersive web experiences for clients like Nike and Red Bull. Specialized in WebGL interactions and GSAP animations.",
+      "skills": ["Three.js", "GSAP", "WebGL", "Vue.js"]
+    },
+    {
+      "company": "StartUp Flow",
+      "role": "Frontend Intern",
+      "date": "2021 — 2022",
+      "description": "Collaborated with the product team to build the MVP of a fintech dashboard. Implemented real-time data visualization using D3.js.",
+      "skills": ["JavaScript", "D3.js", "CSS", "Git"]
+    }
+  ],
+  "skills": {
+    "frontend": {
+      "title": "Frontend & UI",
+      "icon": "layout",
+      "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion", "Redux", "WebGL"]
+    },
+    "backend": {
+      "title": "Backend & Cloud",
+      "icon": "server",
+      "skills": ["Node.js", "Python", "PostgreSQL", "GraphQL", "AWS Lambda", "Docker", "Firebase", "Redis"]
+    },
+    "tools": {
+      "title": "Tools & Architecture",
+      "icon": "cpu",
+      "skills": ["Git", "Figma", "Jest", "CI/CD", "Vercel", "System Design", "Agile", "Linux"]
+    }
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "school": "Institute of Technical Excellence",
+      "year": "2021 — 2025",
+      "desc": "Specialized in Artificial Intelligence and Data Structures. Graduated with First Class Distinction.",
+      "tags": ["3.8 GPA", "Vice President of Coding Club"]
+    },
+    {
+      "degree": "Full Stack Web Development",
+      "school": "Meta Coursera Professional Certificate",
+      "year": "2023",
+      "desc": "Intensive coursework on React, Node.js, and Cloud Deployment. Capstone project focused on E-commerce architecture.",
+      "tags": ["React Specialist", "Backend Certification"]
+    }
+  ],
+  "certifications": [
+    { "name": "AWS Cloud Practitioner", "issuer": "Amazon", "icon": "cloud" },
+    { "name": "Meta Frontend Dev", "issuer": "Coursera", "icon": "code" }
+  ],
+  "projects": [
+    {
+      "title": "Neon Nexus",
+      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
+      "tech": ["React", "Three.js", "Tailwind"],
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
+      "color": "#0f172a" 
+    },
+    {
+      "title": "AI Vision",
+      "description": "Computer vision dashboard for real-time data analysis. Visualizing neural network layers in the browser.",
+      "tech": ["Python", "TensorFlow", "D3.js"],
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000",
+      "color": "#172554"
+    },
+    {
+      "title": "Cyber Finance",
+      "description": "Decentralized trading protocol with a liquid UI. High-frequency updates via WebSockets.",
+      "tech": ["Solidity", "React", "Ethers.js"],
+      "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2000",
+      "color": "#312e81"
+    }
+  ],
+  "contact": {
+    "title": "Let's Build Together.",
+    "email": "hello@yourname.com",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "instagram": "https://instagram.com/yourusername"
+  }
+}
