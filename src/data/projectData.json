@@ -19,6 +19,7 @@
       "description": "Leading the migration of legacy architecture to Next.js. Improved site performance by 40% and established a new design system used by 5+ teams.",
       "skills": ["React", "Next.js", "TypeScript", "GraphQL"]
     },
+    
     {
       "company": "Creative Solutions",
       "role": "Creative Developer",
@@ -72,6 +73,20 @@
     { "name": "Meta Frontend Dev", "issuer": "Coursera", "icon": "code" }
   ],
   "projects": [
+    {
+      "title": "Neon Nexus",
+      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
+      "tech": ["React", "Three.js", "Tailwind"],
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
+      "color": "#0f172a" 
+    },
+    {
+      "title": "Neon Nexus",
+      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
+      "tech": ["React", "Three.js", "Tailwind"],
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
+      "color": "#0f172a" 
+    },
     {
       "title": "Neon Nexus",
       "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",

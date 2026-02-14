@@ -54,8 +54,8 @@ export default function App() {
           {/* THE SECTIONS */}
           {/* We remove 'bg-slate-950' from here so the background shows through */}
           <div className="relative z-10"> 
-            <Projects />
             <Experience />
+            <Projects />
             <Skills />
             <Education />
             <Contact />
