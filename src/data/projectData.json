@@ -3,117 +3,150 @@
     "name": "SHRUTHI KANNAPIRAN",
     "role": "Data & AI Engineer",
     "headline": "Crafting intelligent digital experiences.",
-    "description": "I design and build scalable data pipelines and analytics systems. Passionate about transforming raw data into actionable insights, and actively exploring applied AI, machine learning, and intelligent data platforms.",
+    "description": "I build scalable cloud-native systems and trusted data pipelines that power modern AI and intelligent business platforms.",
     "socials": {
       "resume": "/resume.pdf",
-      "linkedin": "https://linkedin.com/in/yourprofile",
-      "github": "https://github.com/yourusername",
-      "instagram": "https://instagram.com/yourusername"
+      "linkedin": "https://www.linkedin.com/in/shruthi-kannapiran/",
+      "github": "https://github.com/ShruthiKannapiran"
+      
     }
   },
   "experience": [
     {
-      "company": "TechNova Inc.",
-      "role": "Senior Frontend Developer",
-      "date": "2024 — Present",
-      "description": "Leading the migration of legacy architecture to Next.js. Improved site performance by 40% and established a new design system used by 5+ teams.",
-      "skills": ["React", "Next.js", "TypeScript", "GraphQL"]
+      "company": "Synergech Solutions",
+      "role": "Data Engineer Intern",
+      "date": "June 2025 — August 2025",
+      "description": "Managed Azure Data Factory workflows and Azure Web Apps to process user logs into curated datasets for Synapse, implementing automated validation to ensure high-quality KPI reporting and actionable business insights.",
+      "skills": ["Azure- ADF, Synapse, Web Apps", "ETL Pipelines", "SQL", "Python", "Data Modeling", "Deployment validation" ]
     },
     
     {
-      "company": "Creative Solutions",
-      "role": "Creative Developer",
-      "date": "2022 — 2024",
-      "description": "Developed award-winning immersive web experiences for clients like Nike and Red Bull. Specialized in WebGL interactions and GSAP animations.",
-      "skills": ["Three.js", "GSAP", "WebGL", "Vue.js"]
+      "company": "Accenture Solutions",
+      "role": "Data Engineer",
+      "date": "Oct 2022 — July 2024",
+      "description": "Managed metadata, data lineage, and ETL pipelines to migrate 3TB of healthcare data to Azure Synapse, optimizing Spark/SQL jobs to reduce processing time by 15% and improve KPI reporting.",
+      "skills": ["Microsoft SSIS & SSRS", "Data Governance", "Azure", "Hadoop Ecosystem","ELT/ETL (SQL & PySpark Optimization)"]
     },
     {
-      "company": "StartUp Flow",
-      "role": "Frontend Intern",
-      "date": "2021 — 2022",
-      "description": "Collaborated with the product team to build the MVP of a fintech dashboard. Implemented real-time data visualization using D3.js.",
-      "skills": ["JavaScript", "D3.js", "CSS", "Git"]
+      "company": "Alagappa University",
+      "role": "AI Research Intern",
+      "date": "Aug 2022 — Sep 2022",
+      "description": "Built and tuned machine learning models for biometric authentication and classification, improving performance through feature work and parameter tuning.",
+      "skills": ["Machine Learning (CNN, Gradient Boosting)", "Predictive Modeling", "Feature Engineering", "Hyperparameter Tuning", "Python (Scikit-Learn, TensorFlow/Keras)"]
     }
   ],
   "skills": {
     "frontend": {
-      "title": "Frontend & UI",
+      "title": "Data Engineering & Cloud",
       "icon": "layout",
-      "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion", "Redux", "WebGL"]
+      "skills": [
+        "Python", 
+        "SQL", 
+        "Azure Data Factory", 
+        "AWS (S3/Glue/Redshift)", 
+        "Snowflake", 
+        "PySpark", 
+        "Airflow", 
+        "Docker"
+      ]
     },
     "backend": {
-      "title": "Backend & Cloud",
+      "title": "Applied AI & ML",
       "icon": "server",
-      "skills": ["Node.js", "Python", "PostgreSQL", "GraphQL", "AWS Lambda", "Docker", "Firebase", "Redis"]
+      "skills": [
+        "LLMs (Gemini/GPT)", 
+        "RAG", 
+        "Agentic AI (n8n, Flowise)", 
+        "Fine-tuning", 
+        "Vector Databases", 
+        "PyTorch", 
+        "Scikit-learn", 
+        "Pandas", 
+        "NumPy", 
+        "Hugging Face"
+      ]
     },
     "tools": {
-      "title": "Tools & Architecture",
+      "title": "Analytical Skills",
       "icon": "cpu",
-      "skills": ["Git", "Figma", "Jest", "CI/CD", "Vercel", "System Design", "Agile", "Linux"]
+      "skills": [
+        "Tableau",
+        "Power BI",  
+        "Statistical Analysis", 
+        "KPI Development", 
+        "Data Lineage",  
+        "Query Optimization", 
+        "Git"
+      ]
     }
-  },
+},
   "education": [
     {
-      "degree": "Bachelor of Technology in Computer Science",
-      "school": "Institute of Technical Excellence",
-      "year": "2021 — 2025",
-      "desc": "Specialized in Artificial Intelligence and Data Structures. Graduated with First Class Distinction.",
-      "tags": ["3.8 GPA", "Vice President of Coding Club"]
+      "degree": "Master of Science in Information Technology and Management",
+      "school": "The University of Dallas at Texas",
+      "year": "Aug 2024 — May 2026",
+      "desc": "Specialized in Data Engineering and Artificial Intelligence",
+      "tags": ["3.7 GPA", "Recipient of Dean's Excellence Scholarship"]
     },
     {
-      "degree": "Full Stack Web Development",
-      "school": "Meta Coursera Professional Certificate",
-      "year": "2023",
-      "desc": "Intensive coursework on React, Node.js, and Cloud Deployment. Capstone project focused on E-commerce architecture.",
-      "tags": ["React Specialist", "Backend Certification"]
+      "degree": "Bachelor of Engineering in Electronics and Communication",
+      "school": "Anna University",
+      "year": "June 2018- May 2022",
+      "desc": "Intensive coursework on programming and data structures, embedded systems, computer and communication networks.",
+      "tags": ["3.5 GPA", "First Class Distinction"]
+    },
+    {
+      "degree": "Diploma in Artificila Intelligence and Machine Learning",
+      "school": "Alagappa University",
+      "year": "Jan 2022- Dec 2022",
+      "desc": "Specialized in applied AI and ML, with Python-based model development and RDBMS data querying for supervised learning use cases.",
+      "tags": ["3.2 GPA", "First Class"]
     }
   ],
   "certifications": [
-    { "name": "AWS Cloud Practitioner", "issuer": "Amazon", "icon": "cloud" },
-    { "name": "Meta Frontend Dev", "issuer": "Coursera", "icon": "code" }
+    { "name": "Snowpro Associate:Platform", "issuer": "Snowflake", "icon": "cloud" }
   ],
   "projects": [
     {
-      "title": "Neon Nexus",
-      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
-      "tech": ["React", "Three.js", "Tailwind"],
+      "title": "Data Platform Architecture:",
+      "description": "Built an AWS data platform for banking analytics, using S3 for storage, Glue for the data catalog, and Athena and Redshift for querying and reporting.",
+      "tech": ["AWS (S3, Glue, Athena, Redshift)", "SQL analytics", "data warehousing"],
       "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
       "color": "#0f172a" 
     },
     {
-      "title": "Neon Nexus",
-      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
-      "tech": ["React", "Three.js", "Tailwind"],
+      "title": "Big Data Analytics",
+      "description": "Processed large telemetry data with Spark and Hive, ran EDA and cleaning, built ML models to predict risk and maintenance patterns, and presented insights in Tableau.",
+      "tech": ["Hadoop ecosystem (Spark, Hive, Impala, HDFS, YARN)", "Tableau", "ML models (CNN, Decision Tree)", "EDA", "Feature Engineering"],
       "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
       "color": "#0f172a" 
     },
     {
-      "title": "Neon Nexus",
-      "description": "A futuristic e-commerce platform built with Next.js and WebGL. Features real-time 3D product customization.",
-      "tech": ["React", "Three.js", "Tailwind"],
+      "title": "LLM Text Classification",
+      "description": "Built a transformer-based text classifier, fine-tuned it with LoRA and QLoRA, and evaluated results using accuracy and F1.",
+      "tech": ["Transformers (LoRA/QLoRA)", "Hugging Face", "PyTorch", "Python"],
       "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000",
       "color": "#0f172a" 
     },
     {
-      "title": "AI Vision",
-      "description": "Computer vision dashboard for real-time data analysis. Visualizing neural network layers in the browser.",
-      "tech": ["Python", "TensorFlow", "D3.js"],
+      "title": "Agentic AI",
+      "description": "Built an email triage agent using n8n and Google Gemini, automating intake, classification, routing, and structured Slack updates, with state stored in MySQL.",
+      "tech": ["n8n", "Google Gemini", "MySQL", "Gmail API", "Slack API"],
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000",
       "color": "#172554"
     },
     {
-      "title": "Cyber Finance",
-      "description": "Decentralized trading protocol with a liquid UI. High-frequency updates via WebSockets.",
-      "tech": ["Solidity", "React", "Ethers.js"],
+      "title": "RAG Pipeline",
+      "description": "Designed a RAG pipeline that retrieves using embeddings and reranks candidates in multiple stages, improving response relevance by 18%.",
+      "tech": ["RAG", "Embeddings", "Vector Search", "Reranking"],
       "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2000",
       "color": "#312e81"
     }
   ],
   "contact": {
     "title": "Let's Build Together.",
-    "email": "hello@yourname.com",
-    "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourusername",
-    "instagram": "https://instagram.com/yourusername"
+    "email": "shruthikannapiran@gmail.com",
+    "github": "https://github.com/ShruthiKannapiran",
+    "linkedin": "https://www.linkedin.com/in/shruthi-kannapiran/"
   }
 }
