@@ -105,11 +105,11 @@ export const Contact = () => {
                 <GithubIcon /> <span>GitHub</span>
               </a>
             </Magnetic>
-            <Magnetic>
+            {/* <Magnetic>
               <a href={data.contact.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-slate-900 border border-white/10 rounded-full text-slate-300 hover:text-white hover:border-cyan-500/50 hover:bg-slate-800 transition-all">
                 <InstagramIcon /> <span>Instagram</span>
               </a>
-            </Magnetic>
+            </Magnetic> */}
           </div>
         </div>
 
@@ -140,7 +140,7 @@ I design and build scalable data pipelines and analytics systems. Passionate abo
               <h4 className="text-white font-bold">Socials</h4>
               <a href={data.contact.linkedin} className="text-slate-500 hover:text-cyan-400 transition-colors">LinkedIn</a>
               <a href={data.contact.github} className="text-slate-500 hover:text-cyan-400 transition-colors">GitHub</a>
-              <a href={data.contact.instagram} className="text-slate-500 hover:text-cyan-400 transition-colors">Instagram</a>
+              {/* <a href={data.contact.instagram} className="text-slate-500 hover:text-cyan-400 transition-colors">Instagram</a> */}
             </div>
           </div>
         </div>

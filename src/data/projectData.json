@@ -15,7 +15,7 @@
     {
       "company": "Synergech Solutions",
       "role": "Data Engineer Intern",
-      "date": "June 2025 — August 2025",
+      "date": "June 2025 — Aug 2025",
       "description": "Managed Azure Data Factory workflows and Azure Web Apps to process user logs into curated datasets for Synapse, implementing automated validation to ensure high-quality KPI reporting and actionable business insights.",
       "skills": ["Azure- ADF, Synapse, Web Apps", "ETL Pipelines", "SQL", "Python", "Data Modeling", "Deployment validation" ]
     },

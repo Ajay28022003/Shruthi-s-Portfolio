@@ -94,9 +94,9 @@ export const Hero = () => {
               <LinkedinIcon />
             </a>
             
-            <a href={data.hero.socials.instagram} target="_blank" rel="noreferrer" className="p-2 text-slate-300 hover:text-pink-500 hover:bg-white/10 rounded-full transition-all hover:scale-110">
+            {/* <a href={data.hero.socials.instagram} target="_blank" rel="noreferrer" className="p-2 text-slate-300 hover:text-pink-500 hover:bg-white/10 rounded-full transition-all hover:scale-110">
               <InstagramIcon />
-            </a>
+            </a> */}
 
           </div>
         </motion.div>

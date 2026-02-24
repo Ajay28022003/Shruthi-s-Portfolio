@@ -13,7 +13,7 @@ const FlipCard = ({ edu }) => {
             <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-6 text-cyan-400">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
+            <h3 className="text-lg font-bold text-white mb-2">{edu.degree}</h3>
             <p className="text-slate-400">{edu.school}</p>
           </div>
           <div className="flex justify-between items-end">
@@ -63,7 +63,7 @@ export const Education = () => {
         </motion.div>
         
         {/* 3D GRID LAYOUT */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {data.education.map((edu, i) => (
             <FlipCard key={i} edu={edu} />
           ))}

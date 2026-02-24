@@ -68,7 +68,7 @@ const ProjectCard = ({ project, index, range, targetScale, progress }) => {
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Selected Work</span>
               </motion.div>
               
-              <motion.h3 variants={textVariants} className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <motion.h3 variants={textVariants} className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                 {project.title}
               </motion.h3>
               
@@ -87,7 +87,7 @@ const ProjectCard = ({ project, index, range, targetScale, progress }) => {
 
             <motion.div variants={textVariants} className="mt-8 md:mt-0">
               <a href="#" className="inline-flex items-center gap-2 text-white font-bold hover:text-cyan-400 transition-colors group/btn">
-                View Case Study
+                View Github repository
                 <svg className="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

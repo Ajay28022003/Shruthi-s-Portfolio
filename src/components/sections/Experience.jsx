@@ -47,7 +47,7 @@ const ExperienceCard = ({ job, index }) => {
       </div>
 
       {/* 2. DATE (Desktop) */}
-      <div className="absolute left-[-150px] top-8 hidden md:block text-right w-[120px]">
+      <div className="absolute left-[-170px] top-6.5 hidden md:block text-right w-[150px]">
         <span className="text-sm font-bold text-slate-500 group-hover:text-cyan-400 transition-colors duration-300">
           {job.date}
         </span>
