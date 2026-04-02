@@ -1,27 +1,43 @@
 import { useRef } from 'react';
-import { motion, useScroll, useSpring, useTransform, useMotionTemplate, useMotionValue } from 'framer-motion';
+import { motion, useScroll, useSpring, useMotionTemplate, useMotionValue } from 'framer-motion';
 import data from '../../data/projectData.json';
 
-// --- ANIMATION VARIANTS ---
-const cardVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { duration: 0.5, ease: "circOut", staggerChildren: 0.1 } 
-  }
-};
+// ── SECTION HEADER ────────────────────────────────────────────────────────────
+const SectionHeader = ({ label, title, accent }) => (
+  <div className="mb-20 pl-8 md:pl-16">
+    <motion.p
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="text-xs font-bold uppercase tracking-[0.25em] text-indigo-500 mb-4"
+    >
+      {label}
+    </motion.p>
+    <motion.h2
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+      className="text-[10vw] md:text-6xl font-black text-slate-900 mb-6 tracking-tighter"
+    >
+      {title} <span className="text-indigo-200">{accent}</span>
+    </motion.h2>
+    <motion.div
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="h-0.5 w-24 bg-gradient-to-r from-indigo-500 via-violet-500 to-transparent origin-left"
+    />
+  </div>
+);
 
-const childVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
-};
-
-// --- SPOTLIGHT CARD COMPONENT ---
+// ── EXPERIENCE CARD ───────────────────────────────────────────────────────────
 const ExperienceCard = ({ job, index }) => {
-  // Mouse tracking for the Spotlight effect
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const cardRef = useRef(null);
 
   function handleMouseMove({ currentTarget, clientX, clientY }) {
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -30,147 +46,132 @@ const ExperienceCard = ({ job, index }) => {
   }
 
   return (
-    <div className="relative pl-8 md:pl-16 py-6 group">
-      
-      {/* 1. TIMELINE NODE (With Pulse Animation) */}
-      <div className="absolute left-[-5px] top-8 flex items-center justify-center z-10">
-        <motion.div 
+    <div className="relative pl-8 md:pl-16 py-5 group">
+
+      {/* TIMELINE NODE */}
+      <div className="absolute left-[-5px] top-8 z-10">
+        <motion.div
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="w-3 h-3 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:border-cyan-400 group-hover:bg-cyan-400 transition-colors duration-500"
+          transition={{ type: 'spring', stiffness: 400, damping: 20, delay: index * 0.1 }}
+          className="relative w-3 h-3 rounded-full bg-white border-2 border-slate-300 group-hover:border-indigo-500 group-hover:bg-indigo-500 transition-all duration-500 shadow-sm"
         >
-          {/* Ripple Effect on Hover */}
-          <div className="absolute inset-0 -z-10 rounded-full bg-cyan-400/50 opacity-0 group-hover:animate-ping" />
+          <div className="absolute inset-[-4px] rounded-full border border-indigo-300/0 group-hover:border-indigo-300/60 group-hover:scale-[2] transition-all duration-500 scale-100" />
         </motion.div>
       </div>
 
-      {/* 2. DATE (Desktop) */}
-      <div className="absolute left-[-170px] top-6.5 hidden md:block text-right w-[150px]">
-        <span className="text-sm font-bold text-slate-500 group-hover:text-cyan-400 transition-colors duration-300">
+      {/* DATE (Desktop) */}
+      <div className="absolute left-[-175px] top-[26px] hidden md:block text-right w-[155px]">
+        <span className="text-xs font-bold text-slate-600 group-hover:text-indigo-500 transition-colors duration-300 tracking-wide uppercase">
           {job.date}
         </span>
       </div>
 
-      {/* 3. THE SPOTLIGHT CARD */}
-      <motion.div 
-        variants={cardVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }}
+      {/* CARD */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: '-8%' }}
+        transition={{ duration: 0.6, delay: index * 0.1, ease: [0.33, 1, 0.68, 1] }}
         onMouseMove={handleMouseMove}
-        className="relative overflow-hidden rounded-2xl border border-white/5 bg-slate-900/50 p-6 md:p-8 transition-colors hover:border-white/10"
+        ref={cardRef}
+        className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/70 p-6 md:p-8 transition-all duration-300 hover:border-indigo-200 hover:shadow-2xl hover:shadow-indigo-100/60 hover:-translate-y-1 backdrop-blur-sm"
       >
-        
-        {/* SPOTLIGHT GRADIENT OVERLAY */}
+        {/* SPOTLIGHT */}
         <motion.div
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
           style={{
-            background: useMotionTemplate`
-              radial-gradient(
-                650px circle at ${mouseX}px ${mouseY}px,
-                rgba(6, 182, 212, 0.15),
-                transparent 80%
-              )
-            `,
+            background: useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(99,102,241,0.07), transparent 80%)`,
           }}
         />
 
-        {/* CONTENT (Relative z-10 to sit above spotlight) */}
         <div className="relative z-10">
-          <motion.span variants={childVariants} className="md:hidden text-xs font-bold text-cyan-400 mb-2 block">
+          {/* MOBILE DATE */}
+          <span className="md:hidden text-[10px] font-bold text-indigo-400 uppercase tracking-[0.2em] mb-3 block">
             {job.date}
-          </motion.span>
+          </span>
 
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-            <motion.h3 variants={childVariants} className="text-2xl font-bold text-white group-hover:text-cyan-50 transition-colors">
-              {job.role}
-            </motion.h3>
-            <motion.span variants={childVariants} className="text-sm font-medium text-slate-400 bg-white/5 px-3 py-1 rounded-full border border-white/5">
-              {job.company}
-            </motion.span>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-5">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-700 transition-colors leading-tight">
+                {job.role}
+              </h3>
+              <span className="text-sm font-semibold text-indigo-600 mt-1 block">{job.company}</span>
+            </div>
+            {/* Type badge */}
+            <span className="self-start text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 whitespace-nowrap">
+              Full-time
+            </span>
           </div>
 
-          <motion.p variants={childVariants} className="text-slate-400 leading-relaxed mb-6 max-w-2xl">
+          <p className="text-sm text-slate-700 leading-relaxed mb-6 max-w-2xl">
             {job.description}
-          </motion.p>
+          </p>
 
-          <motion.div variants={childVariants} className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {job.skills.map((skill, i) => (
-              <motion.span 
+              <motion.span
                 key={i}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04 }}
                 whileHover={{ scale: 1.05, y: -2 }}
-                className="px-3 py-1 text-xs font-semibold text-slate-500 bg-transparent rounded border border-slate-800 hover:border-cyan-500/30 hover:text-cyan-400 transition-colors cursor-default"
+                className="px-2.5 py-1 text-[11px] font-semibold text-slate-600 bg-slate-50 rounded-lg border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-all duration-200 cursor-default"
               >
-                # {skill}
+                {skill}
               </motion.span>
             ))}
-          </motion.div>
+          </div>
         </div>
-
       </motion.div>
     </div>
   );
 };
 
-// --- MAIN SECTION ---
+// ── MAIN SECTION ──────────────────────────────────────────────────────────────
 export const Experience = () => {
   const containerRef = useRef(null);
-  
-  // Create a smoother scroll progress for the laser line
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start end', 'end start']
+    offset: ['start end', 'end start'],
   });
-
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 80, damping: 25 });
 
   return (
     <section id="experience" className="relative bg-transparent py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        
-        {/* HEADER */}
-        <div className="mb-20 pl-8 md:pl-16">
-          <motion.h2 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-[10vw] md:text-6xl font-bold text-white mb-6 tracking-tighter"
-          >
-            Experience <span className="text-slate-700">.</span>
-          </motion.h2>
-          <motion.div 
-             initial={{ scaleX: 0 }}
-             whileInView={{ scaleX: 1 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.8, delay: 0.2 }}
-             className="h-px w-24 bg-cyan-500 mb-6 origin-left"
-          />
-        </div>
 
-        {/* TIMELINE CONTAINER */}
+        <SectionHeader label="Career Journey" title="Experience" accent="." />
+
+        {/* TIMELINE */}
         <div ref={containerRef} className="relative">
-          
-          {/* THE SPINE */}
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-slate-800 md:left-[0.5px]">
-            {/* The Glowing Laser Beam */}
-            <motion.div 
-              style={{ scaleY: smoothProgress }} 
-              className="absolute top-0 left-0 w-full bg-gradient-to-b from-cyan-400 via-blue-500 to-transparent origin-top shadow-[0_0_20px_2px_rgba(6,182,212,0.5)]"
+
+          {/* SPINE */}
+          <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-slate-200">
+            <motion.div
+              className="absolute top-0 inset-x-0 origin-top"
+              style={{
+                scaleY: smoothProgress,
+                background: 'linear-gradient(to bottom, #6366f1, #a78bfa, transparent)',
+                width: '100%',
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                transformOrigin: 'top',
+                boxShadow: '0 0 10px rgba(99,102,241,0.4)',
+              }}
             />
           </div>
 
-          {/* CARDS */}
-          <div className="space-y-12">
+          <div className="space-y-10">
             {data.experience.map((job, i) => (
               <ExperienceCard key={i} job={job} index={i} />
             ))}
           </div>
-
         </div>
-
       </div>
     </section>
   );

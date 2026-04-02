@@ -58,7 +58,7 @@ export const Cursor = () => {
           x: "-50%",
           y: "-50%",
         }}
-        className="absolute w-2 h-2 bg-orange-600 rounded-full mix-blend-difference"
+        className="absolute w-2 h-2 bg-indigo-600 rounded-full"
       />
 
       {/* OUTER RING (Follows with spring physics) */}
@@ -72,13 +72,13 @@ export const Cursor = () => {
         animate={{
           width: hovered ? 60 : 32,
           height: hovered ? 60 : 32,
-          opacity: hovered ? 0.5 : 0.3,
-          backgroundColor: clicked ? "#22d3ee" : "transparent", // Cyan on click
-          border: clicked ? "none" : "2px solid white",
+          opacity: hovered ? 0.6 : 0.4,
+          backgroundColor: clicked ? "rgba(99, 102, 241, 0.15)" : "transparent",
+          border: clicked ? "2px solid #6366f1" : "2px solid #6366f1",
           scale: clicked ? 0.8 : 1,
         }}
         transition={{ type: "spring", stiffness: 400, damping: 25 }}
-        className="absolute rounded-full pointer-events-none mix-blend-difference"
+        className="absolute rounded-full pointer-events-none"
       />
     </div>
   );

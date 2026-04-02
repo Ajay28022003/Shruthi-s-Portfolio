@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/sections/Hero';
 import { Projects } from './components/sections/Projects';
@@ -9,7 +9,7 @@ import { Contact } from './components/sections/Contact';
 import { Education } from './components/sections/Education';
 import { Cursor } from './components/Cursor';
 import { Loader } from './components/Loader';
-import { Background } from './components/Background'; // Import the new Background
+import { Background } from './components/Background';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(() => {
@@ -30,40 +30,32 @@ export default function App() {
   }, [isLoading]);
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-950 text-white">
-      
+    <div className="relative w-full min-h-screen bg-[#eef2ff] text-slate-900">
+
       <AnimatePresence mode="wait">
         {isLoading && <Loader setIsLoading={handleLoadingComplete} />}
       </AnimatePresence>
 
       <Cursor />
       <Navbar />
-      
+
       <main>
-        {/* 1. HERO SECTION (Untouched, has its own 3D background) */}
+        {/* HERO — has its own 3D canvas */}
         <Hero />
-        
-        {/* 2. CONTENT CONTAINER */}
-        {/* We make this relative so the Background sits inside it */}
-        <div className="relative z-10">
-          
-          {/* THE NEW BACKGROUND ANIMATION */}
-          {/* It will stretch to cover all sections below */}
+
+        {/* CONTENT SECTIONS — shared gradient background */}
+        <div className="relative">
           <Background />
-          
-          {/* THE SECTIONS */}
-          {/* We remove 'bg-slate-950' from here so the background shows through */}
-          <div className="relative z-10"> 
+          <div className="relative z-10">
             <Experience />
             <Projects />
             <Skills />
             <Education />
             <Contact />
           </div>
-          
         </div>
       </main>
-      
+
     </div>
   );
 }
